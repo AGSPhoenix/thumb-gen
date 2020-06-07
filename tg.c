@@ -107,7 +107,7 @@ int main(int argc, char* argv[])
     }
     else {
         nw = ow;
-        nh = nh;
+        nh = oh;
     }
 
     image_p = gdImageCreateTrueColor(nw, nh);
