@@ -64,8 +64,9 @@ int main(int argc, char* argv[])
         in = gdImageCreateFromPng(fp);
         file_type = 3;
     }
-    else if (i1 == 0x47 && i2 == 0x49 && i3 == 0x46 && i4 == 0x38 && i5 == 0x39 && i6 == 0x61) {
+    else if (i1 == 0x47 && i2 == 0x49 && i3 == 0x46 && i4 == 0x38 && (i5 == 0x39 || i5 == 0x37) && i6 == 0x61) {
         // GIF: 47 49 46 38 39 61
+        // GIF: 47 49 46 38 37 61
         // printf("GIF\n");
         in = gdImageCreateFromGif(fp);
         file_type = 1;
